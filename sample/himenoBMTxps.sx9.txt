@@ -1,0 +1,31 @@
+"himenoBMTxps.c", line 91: warning(177): variable "i" was declared but never
+          referenced
+    int    i,j,k,nn;
+           ^
+
+"himenoBMTxps.c", line 91: warning(177): variable "j" was declared but never
+          referenced
+    int    i,j,k,nn;
+             ^
+
+"himenoBMTxps.c", line 91: warning(177): variable "k" was declared but never
+          referenced
+    int    i,j,k,nn;
+               ^
+
+sxcc: opt(1593): himenoBMTxps.c, line 152: Loop nest collapsed into one loop.: i
+sxcc: opt(1801): himenoBMTxps.c, line 152: Parallel routine generated.: initmt$1
+sxcc: mul( 1): himenoBMTxps.c, line 152: Parallelized loop.
+sxcc: vec( 1): himenoBMTxps.c, line 152: Vectorized loop.
+sxcc: mul( 1): himenoBMTxps.c, line 170: Parallelized loop.
+sxcc: vec( 1): himenoBMTxps.c, line 172: Vectorized loop.
+sxcc: opt(1801): himenoBMTxps.c, line 198: Parallel routine generated.: jacobi$1
+sxcc: opt(1801): himenoBMTxps.c, line 223: Parallel routine generated.: jacobi$2
+sxcc: opt(1592): himenoBMTxps.c, line 224: Outer loop unrolled inside inner loop.: j
+sxcc: vec( 1): himenoBMTxps.c, line 200: Vectorized loop.
+sxcc: vec( 1): himenoBMTxps.c, line 225: Vectorized loop.
+sxcc: mul( 1): himenoBMTxps.c, line 198: Parallelized loop.
+sxcc: vec( 1): himenoBMTxps.c, line 200: Vectorized loop.
+sxcc: mul( 4): himenoBMTxps.c, line 217: Critical section.
+sxcc: mul( 1): himenoBMTxps.c, line 223: Parallelized loop.
+sxcc: vec( 1): himenoBMTxps.c, line 225: Vectorized loop.

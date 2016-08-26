@@ -1,0 +1,22 @@
+CXX=g++-4.9
+
+CFLAGS=-I/Users/komatsu/opt/rose-0.9.5a/include -I/Users/komatsu/opt/boost-1.47/include
+LDIR =-L/Users/komatsu/opt/rose-0.9.5a/lib -L/Users/komatsu/opt/rose-0.9.5a/lib
+LIBS = -lrose
+
+DEPS = autoParSupport.h
+OBJS = autoParSupport.o autoOMP_c.o
+
+TARGET = autoOMP
+
+%.o: %.C $(DEPS)
+	$(CXX) -c -o $@ $< $(CFLAGS)
+
+$(TARGET): $(OBJS)
+	$(CXX) -o $@ $^ $(CFLAGS) $(LDIR) $(LIBS)
+
+.PHONY: clean
+
+clean:
+	rm -f *.o *~ core
+

@@ -1,0 +1,32 @@
+REQUIREMENTS
+
+ ROSE compiler infrastructure
+    http://rosecompiler.org/
+
+ Boost C++ Libraries
+    http://www.boost.org/
+
+INSTALLATION GUIDE
+
+1. Some environmental variables such as LD_LIBRARY_PATH must be
+   correctly set so as to use ROSE.
+
+   For example, for Darwin,
+   
+   % export DYLD_LIBRARY_PATH=~/opt/rose-0.9.5a/lib:~/opt/boost-1.47/lib:$DYLD_LIBRARY_PATH
+
+   For Linux,
+
+   % export LD_LIBRARY_PATH=~/opt/rose-0.9.5a/lib:~/opt/boost-1.47/lib:$LD_LIBRARY_PATH
+   
+
+2. Modify makefile for your environment.
+
+   You need to specify header files and libraries of ROSE and Boost.
+   You can use the example of Makefiles for Linux and Darwin as a template.
+
+3. Run the GNU make command.
+
+   To compile the package,
+
+   % make
